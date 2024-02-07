@@ -13,6 +13,8 @@
   "dependencies": {
     "@inquirer/select": "^2.0.0",
     "NeteaseCloudMusicApi": "^4.15.3",
+    "axios": "^1.6.7",
+    "js-yaml": "^4.1.0",
     "qrcode": "^1.5.3"
   }
 }
