@@ -1,2 +1,3 @@
-# netease_playlist_grab
-Grabs playlist information for personal use
+# NeteasePlaylistGrabScript
+
+Grabs playlist from Netease Music. For personal use only.
