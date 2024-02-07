@@ -5,22 +5,14 @@ const { populate_song_with_url_and_lyric } = require("./song")
 const { write_songs_to_file } = require("./output")
 const select = require("@inquirer/select").default
 
-let cookie
-const username = "麻辣烤鱼别放大葱"
+const USERNAME = "麻辣烤鱼别放大葱"
 
 async function main() {
   // login
-  login_qrcode().then((res) => {
-    if (!res) {
-      console.log("running without logging in")
-    } else {
-      cookie = res
-      console.log("Netease logged in!")
-    }
-  })
+  const cookie = await login_qrcode()
 
   // retrieve playlist from username
-  const user = await get_user(username)
+  const user = await get_user(USERNAME)
   const playlist = await get_user_playlist(user.userId)
 
   // select the playlist to be grabbed

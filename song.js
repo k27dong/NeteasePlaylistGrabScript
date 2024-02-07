@@ -3,7 +3,7 @@ const { song_url, lyric } = require("NeteaseCloudMusicApi")
 const get_song_url_by_id = async (id, cookie) => {
   let song_url_data = await song_url({
     id: id,
-    // cookie: cookie,
+    cookie: cookie,
     br: 320000, // 320kbps, should be enough
     realIP: "221.192.199.49",
   })
